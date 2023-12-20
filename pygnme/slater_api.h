@@ -47,6 +47,16 @@ void export_slater_rscf(py::module &m, const std::string &typestr) {
             py::arg("Cx"),
             py::arg("Cw"),
             py::arg("S") = 0.0
+        )
+        .def("evaluate_s2", [](SlaterRscf &scf,
+                                    arma::Mat<Tc> &Cx, arma::Mat<Tc> &Cw,
+                                    Tc &S2) {
+                scf.evaluate_s2(Cx, Cw, S2);
+                return S2;
+            },
+            py::arg("Cx"),
+            py::arg("Cw"),
+            py::arg("S2") = 0.0
         );
 }
 
@@ -91,6 +101,19 @@ void export_slater_uscf(py::module &m, const std::string &typestr) {
              py::arg("Cwa"),
              py::arg("Cwb"),
              py::arg("S") = 0.0
+        )
+        .def("evaluate_s2", [](SlaterUscf &scf, 
+                            arma::Mat<Tc> &Cxa, arma::Mat<Tc> &Cxb,
+                            arma::Mat<Tc> &Cwa, arma::Mat<Tc> &Cwb,
+                            Tc &S2) {
+                scf.evaluate_s2(Cxa, Cxb, Cwa, Cwb, S2);
+                return S2;
+             },
+             py::arg("Cxa"),
+             py::arg("Cxb"),
+             py::arg("Cwa"),
+             py::arg("Cwb"),
+             py::arg("S2") = 0.0
         );
 }
 
