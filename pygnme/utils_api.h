@@ -35,7 +35,7 @@ void export_bitset(py::module &m) {
     py::class_<Bitset>(m, "bitset")
         .def(py::init())
         .def(py::init<const Bitset &>())
-        .def(py::init<std::vector<bool>>())
+        .def(py::init<std::vector<uint8_t>>())
         .def(py::init<int, int>())
         // Functions:
         .def("flip", &Bitset::flip)

@@ -33,7 +33,7 @@ class build_ext(build_ext_orig):
                 "-DCMAKE_INSTALL_RPATH=@ORIGIN",
                 "-DPYTHON_EXECUTABLE=" + sys.executable,
         ]
-        build_args = ["-j4"]
+        build_args = ["-j1"]
 
         os.chdir(str(tmp))
         self.spawn(["cmake", str(cwd)] + cmake_args)
