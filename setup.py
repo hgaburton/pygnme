@@ -26,7 +26,7 @@ class build_ext(build_ext_orig):
         ext = pathlib.Path(self.get_ext_fullpath(ext.name))
         ext.mkdir(parents=True, exist_ok=True)
 
-        config = "Debug" if self.debug else "Release"
+        config = "Debug"# if self.debug else "Release"
         cmake_args = [
                 "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=" + str(ext.parent.absolute()),
                 "-DCMAKE_BUILD_TYPE=" + config,

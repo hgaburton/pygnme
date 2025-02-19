@@ -3,6 +3,7 @@ project(pygnme_build)
 
 # C++ arguments
 set(CMAKE_CXX_FLAGS "-Wall -O3 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # OpenMP
 find_package(OpenMP)
