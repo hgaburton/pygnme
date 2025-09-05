@@ -1,6 +1,6 @@
 [submodule "external/libgnme"]
 	path = external/libgnme
-	url = git@github.com:hgaburton/libgnme.git
+	url = https://github.com/hgaburton/libgnme.git
 [submodule "external/carma"]
 	path = external/carma
-	url = git@github.com:RUrlus/carma.git
+	url = https://github.com/RUrlus/carma.git
