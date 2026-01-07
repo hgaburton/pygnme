@@ -28,7 +28,7 @@ Could NOT find Python3 (missing: Python3_NumPy_INCLUDE_DIRS NumPy) (found versio
 This appears because CMake cannot find the NumPy include directories, often if the code is being compiled
 in a virtual environment. 
 
-A workaround is to add the following CMake arguments to the `cmake_args` in the setup script:
+A workaround is to add the following CMake arguments to the `cmake_args` list in the `setup.py` script:
 ```
 "-DPython3_NumPy_INCLUDE_DIRS=<NUMPY_PATH>"
 ```
