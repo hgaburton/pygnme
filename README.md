@@ -32,7 +32,7 @@ A workaround is to add the following CMake arguments to the `cmake_args` in the 
 ```
 "-DPython3_NumPy_INCLUDE_DIRS=<NUMPY_PATH>"
 ```
-where `<NUMPY_PATH>' can be found through the command-line function 
+where `<NUMPY_PATH>` can be found through the command-line function 
 ```
 python -c 'import numpy;print(numpy.get_include())'
 ```
